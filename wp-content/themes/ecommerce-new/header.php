@@ -32,8 +32,7 @@
 	<header class="header" id="header">
 		<nav class="navbar container">
 			<a href="<?php echo home_url(); ?>" class="brand">
-				<img src="http://localhost/ecommertce/wp-content/uploads/2024/06/NLogo.png" class="site-logo" alt="Site Logo">
-
+				<img src="http://localhost/ecommertce/wp-content/uploads/2024/06/logo.png" class="site-logo" alt="Site Logo">
 			</a>
 			<div class="burger" id="burger">
 				<span class="burger-line"></span>
