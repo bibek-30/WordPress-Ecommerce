@@ -53,3 +53,4 @@
 			</div>
 			<a href="#" class="menu-block">Discover</a>
 		</nav>
+	</header>

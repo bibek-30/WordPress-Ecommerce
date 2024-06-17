@@ -234,7 +234,7 @@ video {
   box-shadow: var(--shadow-medium);
 }
 .header {
-  /* position: fixed; */
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
@@ -529,84 +529,18 @@ video {
   transform: translateX(0);
 }
 
-/* Collections */
-
-.collections {
-  background: var(--accent-2);
-  padding: 30px 0 20px;
-}
-
-.collections h1 {
-  font-size: 35px;
-  margin-bottom: 33px;
-  text-align: center;
-}
-
-.collections .cards {
-  max-width: 75rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.collections .card {
-  margin: 0 20px;
-  flex: 0.35 1 300px;
-}
-
-.collections .card:hover {
-  transform: translateY(-5px);
-}
-
-.collections img {
-  height: 200px;
-  width: 100%;
-  border-radius: 5px;
-}
-
-.collections .card:hover img {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.collections .description {
-  background: white;
-  border-radius: 5px;
-  width: 255px;
-  margin: 0 auto;
-  transform: translateY(-45px);
-  text-align: center;
-  padding: 8px 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s;
-}
-
-.collections .card:hover .description {
-  transform: translateY(-60px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
-
-.collections .tag-2 {
-  font-size: 14px;
-}
-
-.collections h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: normal;
-  margin-top: -3px;
-}
-
 /* Featured */
 
 .featured,
-.recipes {
+.products {
   max-width: 75rem;
   margin: 0 auto;
   padding: 20px 10px 35px;
 }
 
 .featured h1,
-.recipes h1 {
+.products h1,
+.services h1 {
   font-size: 35px;
   margin-bottom: 25px;
 }
@@ -629,13 +563,13 @@ video {
 }
 
 .featured .card:hover,
-.recipes .card:hover {
+.products .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 .featured .card:hover img,
-.recipes .card:hover img {
+.products .card:hover img {
   transform: scale(1.05);
   filter: brightness(90%);
 }
@@ -668,7 +602,7 @@ video {
 }
 
 .featured article,
-.recipes article {
+.products article {
   height: 100%;
   position: relative;
   padding: 12px;
@@ -679,7 +613,7 @@ img {
 }
 
 .featured img,
-.recipes img {
+.products img {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -709,7 +643,7 @@ img {
 }
 
 .featured h2,
-.recipes h2 {
+.products h2 {
   color: white;
   text-transform: capitalize;
   font-family: "Playfair Display", serif;
@@ -750,4 +684,97 @@ img {
       "three"
       "four";
   }
+}
+/* Browse products Section */
+
+.products {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.products h1 {
+  margin-bottom: 35px;
+}
+
+.products .cards {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 125px;
+  grid-gap: 20px;
+}
+
+.small {
+  grid-row: span 2;
+}
+
+.medium {
+  grid-row: span 3;
+}
+
+.big {
+  grid-row: span 4;
+}
+
+.products .stars {
+  color: white;
+  position: relative;
+}
+
+.products .fa-star {
+  font-size: 19px;
+  margin-left: 2px;
+}
+
+.products .stars, .products h2 {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .4s;
+}
+
+.products .card:hover .stars, .products .card:hover h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------ Services ------- */
+.services {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 20px 10px 35px;
+}
+
+.services svg{
+  fill: #fff;
+}
+
+.services-container {
+  row-gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.services-data {
+  text-align: center;
+}
+
+.services-img {
+  width: 64px;
+  height: 64px;
+  fill: var(--first-color);
+  margin-bottom: var(--margin-2);
+}
+
+.services-title {
+  font-size: var(--h3-size);
+  color: var(--title-color);
+  margin-bottom: var(--margin-1);
+}
+
+.services-description {
+  padding: 0 1.5rem;
+}
+
+.body-grid {
+  display: grid;
+  gap: 1.5rem;
 }
